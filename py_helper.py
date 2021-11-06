@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-import os
-os.system('clear')
-io = input('Enter the function do you want help with: ')
+import sys
+if len(sys.argv) > 1:
+    io = sys.argv[1]
+elif len(sys.argv) == 1:
+    io = input("Enter the file name: ")
 help(io)
